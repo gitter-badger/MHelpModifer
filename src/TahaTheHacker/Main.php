@@ -1,3 +1,8 @@
 <?php
 
-use Pocketmine/loader/pluginloader
+use Pocketmine/plugin/PluginBase;
+
+class Main extends PluginBase {
+  
+  
+}
