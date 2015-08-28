@@ -1,3 +1,3 @@
 # My_First_Plugin_Test for MCPE 0.11.0
 This is the First PocketMine plugin i am testing and making...
-# this plugin if for PocketMine-MP
+#This plugin if for PocketMine-MP
