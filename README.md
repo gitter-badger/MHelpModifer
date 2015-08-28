@@ -2,4 +2,6 @@
 ###*This plugin if for PocketMine-MP*
 This is the First PocketMine plugin i am **testing and making**...]
 
-####*from ```Taha_The_Hacker```*
+####*Authors: ```
+Taha_The_Hacker
+```*
