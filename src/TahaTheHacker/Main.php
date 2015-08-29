@@ -7,7 +7,7 @@ use pocketmine\player;
 use pocketmine\event\player\PlayerItemHeldEvent;
 use pocketmine\item\item;
 use pocketmine\event\Listener;
-use pocketmine\event\player\PlayerCommandPreproccessevent;
+use pocketmine\event\player\PlayerCommandPreprocessEvent;
 
 class Main extends PluginBase implements Listener {
   
