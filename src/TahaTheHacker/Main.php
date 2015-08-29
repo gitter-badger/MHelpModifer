@@ -15,7 +15,7 @@ class Main extends PluginBase implements Listener {
    $this->getServer()->getPluginManager()->registerEvents($this, $this); 
   }
   
-    public function ItemHeld(PlayerItemHeldEvent $event) {
+  public function ItemHeld(PlayerItemHeldEvent $event) {
 $item = $event->getItem();
 $id = $item->getId();
 if($id == 345){
