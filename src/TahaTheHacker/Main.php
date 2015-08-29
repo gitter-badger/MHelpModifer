@@ -24,7 +24,7 @@ $player->sendPopup("§a§lTouch the floor to §bSneak!");
 }
 }
 
-public function onProcess(PlayerCommandPreprocessEvent $event){
+ public function onProcess(PlayerCommandPreprocessEvent $event){
 if($event->getMessage() == "/me"){
 $event->getPlayer()->sendMessage("§cSorry. this command is blocked because of bigger text.");
 $event->setCancelled(true);
