@@ -23,12 +23,13 @@ $player = $event->getPlayer();
 $player->sendPopup("§a§lTouch the floor to §bSneak!");
 }
 }
+ public function onCmd(PlayerCommandPreprocessEvent $event){
+    if(in_array($event->getPlayer()->getName(), (array) $this->blocked_players)){
+        $cmd = explode(" ", $event->getMessage());
+        if($cmd[0] == "/me") {
+            $event->getPlayer()->sendmessage("You are not able to use this command now!");
+            $event->setCancelled(true);
+        }
+    }
 
- public function onProcess(PlayerCommandPreprocessEvent $event){
-if($event->getMessage() == "/me"){
-$event->getPlayer()->sendMessage("§cSorry. This command is Blocked because of big text.");
-$event->setCancelled(true);
-
-}
-}
 }
