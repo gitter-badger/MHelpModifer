@@ -7,7 +7,7 @@ use pocketmine\player;
 use pocketmine\event\player\PlayerItemHeldEvent;
 use pocketmine\item\item;
 use pocketmine\event\Listener;
-use pocketmine\event\player\PlayerCommandPreproccessevent
+use pocketmine\event\player\PlayerCommandPreproccessevent;
 
 class Main extends PluginBase implements Listener {
   
@@ -21,6 +21,13 @@ $id = $item->getId();
 if($id == 345){
 $player = $event->getPlayer();
 $player->sendPopup("§a§lTouch the floor to §bSneak!");
+}
+}
+
+public function onProcess(PlayerCommandPreprocessEvent $event){
+if($event->getMessage() == "/me"){
+$event->getPlayer()->sendMessage("§cSorry. this command is blocked because of bigger text.");
+$event->setCancelled(true);
 }
 }
 }
