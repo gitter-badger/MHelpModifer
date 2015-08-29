@@ -23,8 +23,8 @@ $player = $event->getPlayer();
 $player->sendPopup("§a§lTouch the floor to §bSneak!");
 }
 }
-public function onProcess(PlayerCommandPreprocessEvent $event){
-if($event->getMessage() == "/command"){
+  public function onProcess(PlayerCommandPreprocessEvent $event){
+if($event->getMessage() == "/me"){
 $event->getPlayer()->sendMessage("Sorry. This command is disabled");
 $event->setCancelled(true);
 }
