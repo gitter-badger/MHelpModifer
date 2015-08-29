@@ -19,7 +19,7 @@ $item = $event->getItem();
 $id = $item->getId();
 if($id == 345){
 $player = $event->getPlayer();
-$player->sendPopup("Touch the floor to Sneak!");
+$player->sendPopup("§aTouch the floor to §bSneak!");
 }
 }
 }
