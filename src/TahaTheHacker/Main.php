@@ -17,7 +17,7 @@ class Main extends PluginBase implements Listener {
 $item = $event->getItem(); // UNUSED VARIABLE
 $id = $item->getId(); // UNUSED VARIABLE
 $damage = $item->getDamage(); // UNUSED VARIABLE
-if ($getid->345) $player->sendPopup($Click_Me); // UNDEFINED_VARIABLE_EXCEPTION
+if ($getid->345) $player->sendPopup($Touch_in_floor_to_sneak); // UNDEFINED_VARIABLE_EXCEPTION
 }
 
 }
