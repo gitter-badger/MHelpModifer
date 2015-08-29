@@ -14,10 +14,12 @@ class Main extends PluginBase implements Listener {
   }
   
     public function ItemHeld(PlayerItemHeldEvent $event) {
-$item = $event->getItem(); // UNUSED VARIABLE
-$id = $item->getId(); // UNUSED VARIABLE
-$damage = $item->getDamage(); // UNUSED VARIABLE
-if ($getid->345) $player->sendPopup($Touch_in_floor_to_sneak); // UNDEFINED_VARIABLE_EXCEPTION
+$item = $event->getItem();
+$id = $item->getId();
+if($id == 345){
+$player = $event->getPlayer();
+$player->sendPopup("Your text here");
+}
 }
 
 }
