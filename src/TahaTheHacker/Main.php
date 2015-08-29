@@ -20,7 +20,6 @@ $id = $item->getId();
 if($id == 345){
 $player = $event->getPlayer();
 $player->sendPopup("Touch the floor to Sneak!");
-$player->sendTip("To Enable Sneaking::")
 }
 }
 }
