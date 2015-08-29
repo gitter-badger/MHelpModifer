@@ -1,10 +1,10 @@
 <?php
 namespace TahaTheHacker;
 
-use Pocketmine/plugin/PluginBase;
-use Pocketmine/plugin/PluginLoader;
-use Pocketmine/player;
-use Pocketmine/event/player/PlayerItemHeldEvent;
+use pocketmine/plugin/PluginBase;
+use pocketmine/plugin/PluginLoader;
+use pocketmine/player;
+use pocketmine/event/player/PlayerItemHeldEvent;
 use pocketmine/item/item;
 
 class Main extends PluginBase implements Listener {
