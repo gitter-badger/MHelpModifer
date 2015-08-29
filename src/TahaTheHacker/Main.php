@@ -23,5 +23,4 @@ $player->sendPopup("Touch the floor to Sneak!");
 $player->sendTip("To Enable Sneaking::")
 }
 }
-
 }
