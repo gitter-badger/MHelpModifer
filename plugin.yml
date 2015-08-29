@@ -1,5 +1,5 @@
 name: First_Plugin
 version: 1.0
 api: 1.12.0
-main: TahaThe_Hacker/Main.php
+main: TahaTheHacker/Main
 author: TahaTheHacker
