@@ -8,7 +8,7 @@ use pocketmine\event\player\PlayerItemHeldEvent;
 use pocketmine\item\item;
 use pocketmine\event\Listener
 
-class Main extends PluginBase implements Listenser {
+class Main extends PluginBase implements Listener {
   
   public function onEnable(){
    $this->getServer()->getPluginManager()->registerEvents($this, $this); 
