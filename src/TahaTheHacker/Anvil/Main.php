@@ -9,6 +9,7 @@ use pocketmine\item\item;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerCommandPreprocessEvent;
 use pocketmine\utils\TextFormat;
+use pocketmine\command\ConsoleCommandSender;
 
 class Main extends PluginBase implements Listener {
   
@@ -25,6 +26,9 @@ $id = $item->getId();
 if($id == 345){
 $player = $event->getPlayer();
 $player->sendTip("§a§lTouch the floor to §bSneak!");
+foreach($this->getConfig()->get("Sneak") as $command){
+			$this->getServer()->dispatchCommand(new ConsoleCommandSender(), str_replace("{player}", $player->getName(), $command));	
+}
 }
 }
 }
