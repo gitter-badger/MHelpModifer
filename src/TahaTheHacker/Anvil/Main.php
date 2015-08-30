@@ -24,7 +24,7 @@ if($this->getConfig()->get("Compass") == "true"){
 $id = $item->getId();
 if($id == 345){
 $player = $event->getPlayer();
-$player->sendPopup("§a§lTouch the floor to §bSneak!");
+$player->sendTip("§a§lTouch the floor to §bSneak!");
 }
 }
 }
