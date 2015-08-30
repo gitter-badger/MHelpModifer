@@ -12,15 +12,18 @@ use pocketmine\event\player\PlayerCommandPreprocessEvent;
 class Main extends PluginBase implements Listener {
   
   public function onEnable(){
-   $this->getServer()->getPluginManager()->registerEvents($this, $this); 
+   $this->getServer()->getPluginManager()->registerEvents($this, $this);
+   	$this->saveDefaultConfig();
   }
   
   public function ItemHeld(PlayerItemHeldEvent $event) {
 $item = $event->getItem();
+if($this->getConfig()->get("Compass") == "true"){
 $id = $item->getId();
 if($id == 345){
 $player = $event->getPlayer();
 $player->sendPopup("§a§lTouch the floor to §bSneak!");
+}
 }
 }
   public function onProcess(PlayerCommandPreprocessEvent $event){
