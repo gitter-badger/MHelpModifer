@@ -33,7 +33,7 @@ $player->sendTip("§a§lTouch the floor to §bSneak!");
 }
 }
 public function onCmd(PlayerCommandPreprocessEvent $event){
-    if(in_array($event->getPlayer()->getName(), (array) $this->blocked_players)){
+    if(in_array($event->getPlayer()->getName(), (array) $this->config)){
         $cmd = explode(" ", $event->getMessage());
         if($cmd[0] == "/me") {
             $event->getPlayer()->sendTip("You are not able to use this command now!");
