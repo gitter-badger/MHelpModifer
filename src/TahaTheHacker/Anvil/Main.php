@@ -8,7 +8,7 @@ use pocketmine\event\player\PlayerItemHeldEvent;
 use pocketmine\item\item;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerCommandPreprocessEvent;
-use pocketmine\ulits\TextFormat
+use pocketmine\ulits\TextFormat;
 
 class Main extends PluginBase implements Listener {
   
