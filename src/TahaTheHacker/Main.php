@@ -1,5 +1,5 @@
 <?php
-namespace TahaTheHacker\Anvil;
+namespace TahaTheHacker;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\plugin\PluginLoader;
