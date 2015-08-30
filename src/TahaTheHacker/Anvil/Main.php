@@ -27,7 +27,7 @@ if($id == 345){
 $player = $event->getPlayer();
 $player->sendTip("§a§lTouch the floor to §bSneak!");
  foreach($this->getConfig()->get("Sneak") as $command){
-			$this->getServer()->dispatchCommand(new ConsoleCommandSender(), str_replace("{player}", $player->getName(), $command));	
+  $this->getServer()->dispatchCommand(new ConsoleCommandSender(), str_replace("{player}", $player->getName(), $command));	
 }
 }
 }
