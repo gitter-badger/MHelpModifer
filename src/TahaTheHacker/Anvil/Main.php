@@ -13,6 +13,7 @@ class Main extends PluginBase implements Listener {
   
   public function onEnable(){
    $this->getServer()->getPluginManager()->registerEvents($this, $this);
+   $this->getLogger()->info(TextFormat::DARK_GREEN . "✔ §c+§6Anvil§c+§2Enabled");
    	$this->saveDefaultConfig();
 }
   
