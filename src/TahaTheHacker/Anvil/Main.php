@@ -43,6 +43,8 @@ $player->sendTip("§l§a|§6§lFlying §cFeather§a|");
 }
 }
 }
-}
+}else{
+        				$sender->sendMessage("§cYou are not a §l§6VIP§b§r to use this item");
+        			}
 }
 }
