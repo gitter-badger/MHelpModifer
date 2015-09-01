@@ -5,6 +5,10 @@ main: TahaTheHacker\Anvil\Main
 author: TahaTheHacker
 load: POSTWORLD
 permissions:
-  anvil.feather:
-    description: "Allows to use flying feather"
+  anvil:
+    description: "Allow use all Anvil commands."
+    default: false
+    children:
+      anvil.feather:
+    description: "Allows to use flying feather."
     default: op
