@@ -25,7 +25,7 @@ if($this->getConfig()->get("Compass") == "true"){
 $id = $item->getId();
 if($id == 345){
 $player = $event->getPlayer();
-$player->sendTip("§a§lSneak §aEnabled§d!");
+$player->sendTip("§a|§6§lSneaking §cCompass§a|");
  foreach((array)$this->getConfig()->get("sneak") as $command){
   $this->getServer()->dispatchCommand(new ConsoleCommandSender(), str_replace("{player}", $player->getName(), $command));	
 }
