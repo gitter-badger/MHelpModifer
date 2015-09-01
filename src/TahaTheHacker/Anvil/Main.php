@@ -18,8 +18,7 @@ class Main extends PluginBase implements Listener {
    $this->getLogger()->info(TextFormat::DARK_GREEN . "✔ §c+§6Anvil§c+§2 Enabled");
    	$this->saveDefaultConfig();
    	Item::addCreativeItem(276)
-   	Item::removeCreativeItem(325:8)
-   	Item::removeCreativeItem(325:10)
+   	Item::removeCreativeItem(325)
    	Item::removeCreativeItem(57)
 }
   
