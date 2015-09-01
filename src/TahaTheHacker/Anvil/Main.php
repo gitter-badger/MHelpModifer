@@ -38,7 +38,7 @@ $id = $item->getId();
 if($id == 288){
   $player = $event->getPlayer();
 $player->sendTip("§l§a|§6§lFlying §cFeather§a|");
- foreach((array)$this->getConfig()->get("feather") as $command){
+ foreach((array)$this->getConfig()->get("feather-command") as $command){
   $this->getServer()->dispatchCommand(new ConsoleCommandSender(), str_replace("{player}", $player->getName(), $command));	
 }
 }
