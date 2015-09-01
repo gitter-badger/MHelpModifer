@@ -31,5 +31,18 @@ $player->sendTip("§l§a|§6§lSneaking §cCompass§a|");
 }
 }
 }
+if($p->hasPermission("anvil.feather"){
+$item = $event->getItem();
+if($this->getConfig()->get("feather") == "true"){
+$id = $item->getId();
+if($id == 288){
+  $player = $event->getPlayer();
+$player->sendTip("§l§a|§6§lFlying §cFeather§a|");
+ foreach((array)$this->getConfig()->get("feather") as $command){
+  $this->getServer()->dispatchCommand(new ConsoleCommandSender(), str_replace("{player}", $player->getName(), $command));	
+}
+}
+}
+}
 }
 }
