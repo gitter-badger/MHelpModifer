@@ -1,5 +1,3 @@
-# My First Plugin Test for MCPE 0.11.0
-###*This plugin if for PocketMine-MP*
-This is the First PocketMine plugin i am **testing and making**...]
-
+#Anvil By Taha_The_Hacker
+#####This is a <strong>PocketMine</strong> Plugin
 ####*Authors: ```Taha_The_Hacker```
