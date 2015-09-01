@@ -31,7 +31,7 @@ $player->sendTip("§l§a|§6§lSneaking §cCompass§a|");
 }
 }
 }
-if($event->hasPermission("anvil") || $event->hasPermission("anvil.feather")){
+if($event->getPlayer()->hasPermission("anvil") || $event->getPlayer()->hasPermission("anvil.feather")){
 $item = $event->getItem();
 if($this->getConfig()->get("feather") == "true"){
 $id = $item->getId();
