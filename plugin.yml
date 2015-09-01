@@ -4,3 +4,7 @@ api: 1.12.0
 main: TahaTheHacker\Anvil\Main
 author: TahaTheHacker
 load: POSTWORLD
+permissions:
+  anvil.feather:
+    description: "Allows to use flying feather"
+    default: op
