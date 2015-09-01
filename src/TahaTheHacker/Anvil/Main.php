@@ -26,7 +26,7 @@ $id = $item->getId();
 if($id == 345){
 $player = $event->getPlayer();
 $player->sendTip("§a§lSneak §aEnabled§d!");
- foreach((array)$this->getConfig()->get("Sneak") as $command){
+ foreach((array)$this->getConfig()->get("sneak {player}") as $command){
   $this->getServer()->dispatchCommand(new ConsoleCommandSender(), str_replace("{player}", $player->getName(), $command));	
 }
 }
