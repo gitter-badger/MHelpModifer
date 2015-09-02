@@ -45,8 +45,4 @@ $player->sendTip("§l§a|§6§lFlying §cFeather§a|");
 }
 }
 }
-
-  public function item(item $item) {
-    Item::removeCreativeItem(Item::get(325))
-  }
 }
