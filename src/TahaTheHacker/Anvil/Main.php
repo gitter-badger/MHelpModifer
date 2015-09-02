@@ -17,7 +17,7 @@ class Main extends PluginBase implements Listener {
    $this->getServer()->getPluginManager()->registerEvents($this, $this);
    $this->getLogger()->info(TextFormat::DARK_GREEN . "✔ §c+§6Anvil§c+§2 Enabled");
    	$this->saveDefaultConfig();
-   	self::addCreativeItem(Item::get(Item::276));
+   	self::addCreativeItem(Item::get(Item::DIAMOND_BLOCK, 0));
   }
   
   public function ItemHeld(PlayerItemHeldEvent $event) {
