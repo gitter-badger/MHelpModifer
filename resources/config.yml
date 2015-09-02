@@ -2,4 +2,8 @@
 
 Compass: true
 
-Sneak: sneak
+compass-command: sudo {player} sneak
+
+feather: true
+
+feather-command: fly {player}
