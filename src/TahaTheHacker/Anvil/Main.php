@@ -17,7 +17,6 @@ class Main extends PluginBase implements Listener {
    $this->getServer()->getPluginManager()->registerEvents($this, $this);
    $this->getLogger()->info(TextFormat::DARK_GREEN . "✔ §c+§6Anvil§c+§2 Enabled");
    	$this->saveDefaultConfig();
-   	Item::addCreativeItem(Item::get(276))
   }
   
   public function ItemHeld(PlayerItemHeldEvent $event) {
@@ -46,4 +45,8 @@ $player->sendTip("§l§a|§6§lFlying §cFeather§a|");
 }
 }
 }
+
+  public function item(item $item) {
+    Item::removeCreativeItem(Item::get(325))
+  }
 }
