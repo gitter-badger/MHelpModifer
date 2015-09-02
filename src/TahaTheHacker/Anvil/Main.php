@@ -10,7 +10,6 @@ use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerCommandPreprocessEvent;
 use pocketmine\utils\TextFormat;
 use pocketmine\command\ConsoleCommandSender;
-use pocketmine\item\item;
 
 class Main extends PluginBase implements Listener {
   
