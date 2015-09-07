@@ -20,7 +20,7 @@ class Main extends PluginBase implements Listener {
    	item::removeCreativeItem(Item::get(Item::TNT, 0));
    	item::removeCreativeItem(Item::get(Item::BUCKET, 10));
    	
-  }
+                 }
   
   public function ItemHeld(PlayerItemHeldEvent $event) {
 $item = $event->getItem();
