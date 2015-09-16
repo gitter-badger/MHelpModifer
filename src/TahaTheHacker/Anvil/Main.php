@@ -3,7 +3,6 @@ namespace TahaTheHacker\Anvil;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\plugin\PluginLoader;
-use pocketmine\player;
 use pocketmine\event\player\PlayerItemHeldEvent;
 use pocketmine\item\item;
 use pocketmine\event\Listener;
