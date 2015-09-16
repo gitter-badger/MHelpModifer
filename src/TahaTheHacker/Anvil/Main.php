@@ -37,7 +37,7 @@ public function onCmd(PlayerCommandPreprocessEvent $event){
     	public function onCommand(CommandSender $sender, Command $cmd, $label, array $args){
 		switch($cmd->getName()){
 			case "taha":
-				if($sender->hasPermission("anvil.taha")
+				if($sender->hasPermission("anvil.taha"){
         if(!$this->testPermission($sender)){
             return false;
         }
@@ -65,6 +65,7 @@ public function onCmd(PlayerCommandPreprocessEvent $event){
         $sender->teleport($world->getSpawnLocation(), 0, 0);
         $sender->sendMessage(TextFormat::YELLOW . "Teleporting...");
         return true;
+				}
     }
 }
 }
