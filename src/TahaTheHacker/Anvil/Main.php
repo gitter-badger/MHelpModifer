@@ -38,9 +38,6 @@ public function onCmd(PlayerCommandPreprocessEvent $event){
 		switch($cmd->getName()){
 			case "taha":
 				if($sender->hasPermission("anvil.taha")){
-        if(!$this->testPermission($sender)){
-            return false;
-        }
         if(!$sender instanceof Player){
             $sender->sendMessage($this->getConsoleUsage());
             return false;
