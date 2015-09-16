@@ -15,39 +15,12 @@ class Main extends PluginBase implements Listener {
   
   public function onEnable(){
    $this->getServer()->getPluginManager()->registerEvents($this, $this);
-   $this->getLogger()->info(TextFormat::DARK_GREEN . "✔ §c+§6Anvil§c+§2 Enabled");
+   $this->getLogger()->info(TextFormat::DARK_GREEN . "Enabled");
    	$this->saveDefaultConfig();
    	item::removeCreativeItem(Item::get(Item::TNT, 0));
    	item::removeCreativeItem(Item::get(Item::BUCKET, 10));
    	
                  }
-  
-  public function ItemHeld(PlayerItemHeldEvent $event) {
-$item = $event->getItem();
-if($this->getConfig()->get("Compass") == "true"){
-$id = $item->getId();
-if($id == 345){
-$player = $event->getPlayer();
-$player->sendTip("§l§a|§6§lSneaking §cCompass§a|");
- foreach((array)$this->getConfig()->get("compass-command") as $command){
-  $this->getServer()->dispatchCommand(new ConsoleCommandSender(), str_replace("{player}", $player->getName(), $command));	
-}
-}
-}
-if($event->getPlayer()->hasPermission("anvil") || $event->getPlayer()->hasPermission("anvil.feather")){
-$item = $event->getItem();
-if($this->getConfig()->get("feather") == "true"){
-$id = $item->getId();
-if($id == 288){
-  $player = $event->getPlayer();
-$player->sendTip("§l§a|§6§lFlying §cFeather§a|");
- foreach((array)$this->getConfig()->get("feather-command") as $command){
-  $this->getServer()->dispatchCommand(new ConsoleCommandSender(), str_replace("{player}", $player->getName(), $command));	
-}
-}
-}
-}
-}
 
 public function onCmd(PlayerCommandPreprocessEvent $event){
         $cmd = explode(" ", $event->getMessage());
@@ -56,4 +29,39 @@ public function onCmd(PlayerCommandPreprocessEvent $event){
             $event->setCancelled(true);
         }
     }
+    	public function onCommand(CommandSender $sender, Command $cmd, $label, array $args){
+		switch($cmd->getName()){
+			case "skywarshowto":
+        			    public function execute(CommandSender $sender, $alias, array $args){
+        if(!$this->testPermission($sender)){
+            return false;
+        }
+        if(!$sender instanceof Player){
+            $sender->sendMessage($this->getConsoleUsage());
+            return false;
+        }
+        if(count($args) !== 1){
+            $sender->sendMessage($this->getUsage());
+            return false;
+        }
+            $sender->sendMessage(TextFormat::RED . "huh");
+            return false;
+        if(!$sender->getServer()->isLevelGenerated($args[0])){
+            $sender->sendMessage(TextFormat::RED . "My god");
+            return false;
+        }elseif(!$sender->getServer()->isLevelLoaded($args[0])){
+            $sender->sendMessage(TextFormat::YELLOW . "Joining Match..");
+            if(!$sender->getServer()->loadLevel($args[0])){
+                $sender->sendMessage(TextFormat::RED . "Error while joining the match");
+                return false;
+            }
+        }
+        $world = $sender->getServer()->getLevelByName($args[0]);
+        $sender->teleport($world->getSpawnLocation(), 0, 0);
+        $sender->sendMessage(TextFormat::YELLOW . "Teleporting...");
+        return true;
+    }
+}
+					return true;
+        			}
 }
