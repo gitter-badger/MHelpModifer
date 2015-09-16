@@ -36,7 +36,8 @@ public function onCmd(PlayerCommandPreprocessEvent $event){
     }
     	public function onCommand(CommandSender $sender, Command $cmd, $label, array $args){
 		switch($cmd->getName()){
-			case "skywarshowto":
+			case "Taha":
+				if($sender->hasPermission("Anvil.Taha")
         if(!$this->testPermission($sender)){
             return false;
         }
