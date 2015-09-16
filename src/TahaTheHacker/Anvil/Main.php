@@ -66,5 +66,4 @@ public function onCmd(PlayerCommandPreprocessEvent $event){
         return true;
     }
 }
-					return true;
 }
