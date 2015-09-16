@@ -51,7 +51,7 @@ $player->sendTip("§l§a|§6§lFlying §cFeather§a|");
 
 public function onCmd(PlayerCommandPreprocessEvent $event){
         $cmd = explode(" ", $event->getMessage());
-        if($cmd[0] == "/register") {
+        if($cmd[0] == "/me") {
             $event->getPlayer()->sendTip("§c§lThis command is Blocked. reason : §4Bigger text");
             $event->setCancelled(true);
         }
