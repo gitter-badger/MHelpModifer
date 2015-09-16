@@ -10,6 +10,8 @@ use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerCommandPreprocessEvent;
 use pocketmine\utils\TextFormat;
 use pocketmine\command\ConsoleCommandSender;
+use pocketmine\command\CommandSender;
+use pocketmine\Player;
 
 class Main extends PluginBase implements Listener {
   
@@ -32,7 +34,6 @@ public function onCmd(PlayerCommandPreprocessEvent $event){
     	public function onCommand(CommandSender $sender, Command $cmd, $label, array $args){
 		switch($cmd->getName()){
 			case "skywarshowto":
-        			    public function execute(CommandSender $sender, $alias, array $args){
         if(!$this->testPermission($sender)){
             return false;
         }
@@ -63,5 +64,4 @@ public function onCmd(PlayerCommandPreprocessEvent $event){
     }
 }
 					return true;
-        			}
 }
