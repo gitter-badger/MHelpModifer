@@ -25,6 +25,8 @@ class Main extends PluginBase implements Listener {
    	$this->saveDefaultConfig();
    	item::removeCreativeItem(Item::get(Item::TNT, 0));
    	item::removeCreativeItem(Item::get(Item::BUCKET, 10));
+   	item::addCreativeItem(Item::get(Item::DIAMOND_SWORD, 0));
+   	item::addCreativeItem(Item::get(Item::RAIL, 0));
    	
                  }
 
@@ -48,19 +50,16 @@ public function onCmd(PlayerCommandPreprocessEvent $event){
             return false;
         }
         if(!$sender->getServer()->isLevelGenerated($args[0])){
-            $sender->sendMessage(TextFormat::RED . "Something wrong happen while joining");
+            $sender->sendMessage(TextFormat::RED . "§c[§l§6SG§r§c] §4Something wrong happen while joining");
             return false;
         }else{
-        if(!$sender->getServer()->isLevelLoaded($args[0])){
-            $sender->sendMessage(TextFormat::DARK_GREEN . "starting first match..");
-        }
             if(!$sender->getServer()->loadLevel($args[0])){
-                $sender->sendMessage(TextFormat::RED . "Error while joining the match.");
+                $sender->sendMessage(TextFormat::RED . "§c[§l§6SG§r§c] §4Error while joining the match.");
                 return false;
             }
         $world = $sender->getServer()->getLevelByName($args[0]);
         $sender->teleport($world->getSpawnLocation(), 0, 0);
-        $sender->sendMessage(TextFormat::GREEN . "Joining the match..");
+        $sender->sendMessage(TextFormat::GREEN . "§c[§l§6SG§r§c] §aJoining the match..");
         return true;
     }
 
