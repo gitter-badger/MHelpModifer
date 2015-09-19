@@ -9,6 +9,7 @@ commands:
   description: "Runs My First command it tpes to worlds"
   usage: "/test <world>"
   permission: anvil.taha
+  default: true
 permissions:
   anvil:
     description: "Allow use all Anvil commands."
