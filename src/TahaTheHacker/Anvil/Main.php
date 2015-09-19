@@ -19,6 +19,7 @@ use pocketmine\Server;
 use pocketmine\command\Command;
 use pocketmine\command\CommandExecutor;
 use pocketmine\command\PluginCommand;
+use pocketmine\level\Level;
 
 class Main extends PluginBase implements Listener {
   
@@ -70,33 +71,22 @@ public function onCmd(PlayerCommandPreprocessEvent $event){
 	}
  }
 
-public function onSignCreate(SignChangeEvent $event){
-	$player = $event->getPlayer();
-	$sign = $event->getPlayer()->getLevel()->getTile($event->getBlock());
-	if($sign instanceof Sign){
-	$line_0 = $event->getLine(0);
-	$line_1 = $event->getLine(1);
-	$lvl = $player->getServer()->getLevelByName($line_1);
-	
-	if($line_0 =="[SG]"){
-		
-	if(empty($line_1) !== true){
-		
-	if(!$player->getServer()->isLevelGenerated($line_1)){
-		$player->sendMessage("Faild, Not found.");
-		return false;
-	}//Level
-		if($player->getServer()->isLevelGenerated($line_1)){
-		$player->sendMessage("Created!.");
-	if($lvl instanceof Level){
-                foreach($lvl->getPlayers() as $p){
-		$sign->setText("§c[§l§6SG§r§c]", $line_1, "[" . $lvl->getPlayers() . '/10]', "§l§aTap To Join");
-                }
-		}
-		}
-	}//empty!
-	}//sg
-}//sign
-	
-}//Event
-}//Main
+use pocketmine\level\Level;
+use pocketmine\event\block\SignChangeEvent;
+
+    public function onSignCreate(SignChangeEvent $event){
+        $player = $event->getPlayer(); //Get the player
+        $line_0 = $event->getLine(0); //The sign's line 1 (Despite the number)
+        $line_1 = $event->getLine(1); //The sign's line 2
+        if(strtolower($line_0) === "[sg]" && !empty($line_1)){ //Check if the line 1 is equal to [sg] (Since strtolower) and if line 1 is not empty
+            $level = $this->getServer()->getLevelByName($line_1); //Get the level object with the name of $line_1
+            if(!$this->getServer()->isLevelGenerated($line_1)){ //Check if level is generated
+                $player->sendMessage("Failed, Not found."); //LOL
+                return false; //Return a boolean value of false
+            }
+            $player->sendMessage("Created!"); //AGAIN LOL
+            if($level instanceof Level){ //No need this but I am Bored
+                $event->setLine("§c[§l§6SG§r§c]", $line_1, "[" . count($level->getPlayers()) . "/10]", "§l§aTap To Join"); //Set the text. BTW, better use TextFormat::**
+            }
+        }
+    }
