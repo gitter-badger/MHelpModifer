@@ -77,7 +77,7 @@ public function onSignCreate(SignChangeEvent $event){
 	if($sign instanceof Sign){
 	$line0 = $event->getLine(0);
 	$line1 = $event->getLine(1);
-	$lvl = $event->getServer()->getLevelByName($line1);
+	$lvl = $event->getLevelByName($line1);
 	
 	if($line0 =="[SG]"){
 		
