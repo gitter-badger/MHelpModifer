@@ -39,7 +39,7 @@ public function onCmd(PlayerCommandPreprocessEvent $event){
     }
     	public function onCommand(CommandSender $sender, Command $cmd, $label, array $args){
 		switch($cmd->getName()){
-			case "test":
+			case "joinmatch":
 			if($sender->hasPermission("anvil.taha")){
 				if(!$sender instanceof Player){
             $sender->sendMessage("Run this command in-game.");
@@ -63,7 +63,35 @@ public function onCmd(PlayerCommandPreprocessEvent $event){
         return true;
     }
 
-}
-}
-}
-}
+		}
+	}
+ }
+
+public function onSignCreate(SignChangeEvent $event){
+	$player = $event->getPlayer();
+	$sign = $event->getPlayer()->getLevel()->getTile($event->getBlock());
+	if($event->getBlock()->getID() == 323 || $event->getBlock()->getID() == 63 || $event->getBlock()->getID() == 68){
+	if($sign instanceof Sign){
+	$line0 = $event->getLine(0);
+	$line1 = $event->getLine(1);
+	$lvl = $this->plugin->getServer()->getLevelByName($level);
+	
+	if($line0 =="[SG]"){
+		
+	if(empty($line1) !== true){
+		
+	if(!$event->getServer()->isLevelGenerated($line1)){
+		$player->sendMessage("Faild, Not found.");
+		return false;
+	}//Level
+		if($event->getServer()->isLevelGenerated($line1)){
+		$player->sendMessage("Created!.");
+		$signTile->setText("§c[§l§6SG§r§c]", $line1, "[" . $lvl->getPlayers() . '/10]', "§l§aTap To Join");
+		}
+	}//empty!
+	}//sg
+}//sign
+}//block
+	
+}//Event
+}//Main
