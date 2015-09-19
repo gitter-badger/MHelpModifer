@@ -75,23 +75,23 @@ public function onSignCreate(SignChangeEvent $event){
 	$sign = $event->getPlayer()->getLevel()->getTile($event->getBlock());
 	if($event->getBlock()->getID() == 323 || $event->getBlock()->getID() == 63 || $event->getBlock()->getID() == 68){
 	if($sign instanceof Sign){
-	$line0 = $event->getLine(0);
-	$line1 = $event->getLine(1);
-	$lvl = $player->getServer()->getLevelByName($line1);
+	$line_0 = $event->getLine(0);
+	$line_1 = $event->getLine(1);
+	$lvl = $player->getServer()->getLevelByName($line_1);
 	
-	if($line0 =="[SG]"){
+	if($line_0 =="[SG]"){
 		
-	if(empty($line1) !== true){
+	if(empty($line_1) !== true){
 		
-	if(!$player->getServer()->isLevelGenerated($line1)){
+	if(!$player->getServer()->isLevelGenerated($line_1)){
 		$player->sendMessage("Faild, Not found.");
 		return false;
 	}//Level
-		if($player->getServer()->isLevelGenerated($line1)){
+		if($player->getServer()->isLevelGenerated($line_1)){
 		$player->sendMessage("Created!.");
 	if($lvl instanceof Level){
                 foreach($lvl->getPlayers() as $p){
-		$sign->setText("§c[§l§6SG§r§c]", $line1, "[" . $lvl->getPlayers() . '/10]', "§l§aTap To Join");
+		$sign->setText("§c[§l§6SG§r§c]", $line_1, "[" . $lvl->getPlayers() . '/10]', "§l§aTap To Join");
                 }
 		}
 		}
