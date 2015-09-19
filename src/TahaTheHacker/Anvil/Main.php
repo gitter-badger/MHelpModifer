@@ -40,7 +40,7 @@ public function onCmd(PlayerCommandPreprocessEvent $event){
 			case "test":
 			if($sender->hasPermission("anvil.taha")){
 				if(!$sender instanceof Player){
-            $sender->sendMessage($this->getConsoleUsage());
+            $sender->sendMessage("Run this command in-game.");
             return false;
         }
         if(count($args) !== 1){
