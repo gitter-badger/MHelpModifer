@@ -26,7 +26,7 @@ class Main extends PluginBase implements Listener {
    	item::removeCreativeItem(Item::get(Item::TNT, 0));
    	item::removeCreativeItem(Item::get(Item::BUCKET, 10));
    	item::addCreativeItem(Item::get(Item::DIAMOND_SWORD, 0));
-   	item::addCreativeItem(Item::get(Item::RAIL, 0));
+   	item::addCreativeItem(Item::get(Item::DIAMOND, 0));
    	
                  }
 
