@@ -90,3 +90,4 @@ use pocketmine\event\block\SignChangeEvent;
             }
         }
     }
+}
