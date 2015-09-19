@@ -1,4 +1,5 @@
 <?php
+
 namespace TahaTheHacker\Anvil;
 
 use pocketmine\plugin\PluginBase;
@@ -37,28 +38,31 @@ public function onCmd(PlayerCommandPreprocessEvent $event){
     	public function onCommand(CommandSender $sender, Command $cmd, $label, array $args){
 		switch($cmd->getName()){
 			case "test":
-				if($sender->hasPermission("anvil.taha")){
-        if(count($args) !== 1 || count($args) !== 1){
+				if(!$sender instanceof Player){
+            $sender->sendMessage($this->getConsoleUsage());
+            return false;
+        }
+        if(count($args) !== 1){
             $sender->sendMessage($this->getUsage());
             return false;
         }
-            $sender->sendMessage(TextFormat::RED . "huh");
-            return false;
         if(!$sender->getServer()->isLevelGenerated($args[0])){
-            $sender->sendMessage(TextFormat::RED . "My god");
+            $sender->sendMessage(TextFormat::RED . "[Error] World doesn't exist");
             return false;
-        }elseif(!$sender->getServer()->isLevelLoaded($args[0])){
-            $sender->sendMessage(TextFormat::YELLOW . "Joining Match..");
+        }else{
+        if(!$sender->getServer()->isLevelLoaded($args[0])){
+            $sender->sendMessage(TextFormat::YELLOW . "Level is not loaded yet. Loading...");
+        }
             if(!$sender->getServer()->loadLevel($args[0])){
-                $sender->sendMessage(TextFormat::RED . "Error while joining the match");
+                $sender->sendMessage(TextFormat::RED . "[Error] The level couldn't be loaded");
                 return false;
             }
-        }
         $world = $sender->getServer()->getLevelByName($args[0]);
         $sender->teleport($world->getSpawnLocation(), 0, 0);
         $sender->sendMessage(TextFormat::YELLOW . "Teleporting...");
         return true;
-				}
     }
+
+}
 }
 }
