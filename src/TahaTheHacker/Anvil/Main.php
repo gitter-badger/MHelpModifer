@@ -89,7 +89,11 @@ public function onSignCreate(SignChangeEvent $event){
 	}//Level
 		if($player->getServer()->isLevelGenerated($line1)){
 		$player->sendMessage("Created!.");
+	if($lvl instanceof Level){
+                foreach($lvl->getPlayers() as $p){
 		$sign->setText("§c[§l§6SG§r§c]", $line1, "[" . $lvl->getPlayers() . '/10]', "§l§aTap To Join");
+                }
+		}
 		}
 	}//empty!
 	}//sg
