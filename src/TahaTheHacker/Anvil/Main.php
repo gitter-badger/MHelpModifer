@@ -36,7 +36,7 @@ public function onCmd(PlayerCommandPreprocessEvent $event){
     }
     	public function onCommand(CommandSender $sender, Command $cmd, $label, array $args){
 		switch($cmd->getName()){
-			case "taha":
+			case "test":
 				if($sender->hasPermission("anvil.taha")){
         if(count($args) !== 1 || count($args) !== 1){
             $sender->sendMessage($this->getUsage());
