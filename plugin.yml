@@ -5,7 +5,7 @@ main: TahaTheHacker\Anvil\Main
 author: TahaTheHacker
 load: POSTWORLD
 commands:
- test:
+ joinmatch:
   description: "Runs My First command it tpes to worlds"
   usage: "/test <world>"
   permission: anvil.taha
