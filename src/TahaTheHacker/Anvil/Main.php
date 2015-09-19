@@ -44,7 +44,7 @@ public function onCmd(PlayerCommandPreprocessEvent $event){
             return false;
         }
         if(count($args) !== 1){
-            $sender->sendMessage($this->getUsage());
+            $sender->sendMessage("§cUse /test <world>");
             return false;
         }
         if(!$sender->getServer()->isLevelGenerated($args[0])){
@@ -52,7 +52,7 @@ public function onCmd(PlayerCommandPreprocessEvent $event){
             return false;
         }else{
         if(!$sender->getServer()->isLevelLoaded($args[0])){
-            $sender->sendMessage(TextFormat::YELLOW . "starting first match..");
+            $sender->sendMessage(TextFormat::DARK_GREEN . "starting first match..");
         }
             if(!$sender->getServer()->loadLevel($args[0])){
                 $sender->sendMessage(TextFormat::RED . "Error while joining the match.");
@@ -60,7 +60,7 @@ public function onCmd(PlayerCommandPreprocessEvent $event){
             }
         $world = $sender->getServer()->getLevelByName($args[0]);
         $sender->teleport($world->getSpawnLocation(), 0, 0);
-        $sender->sendMessage(TextFormat::YELLOW . "Joining the match..");
+        $sender->sendMessage(TextFormat::GREEN . "Joining the match..");
         return true;
     }
 
