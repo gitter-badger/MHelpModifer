@@ -5,9 +5,9 @@ main: TahaTheHacker\Anvil\Main
 author: TahaTheHacker
 load: POSTWORLD
 commands:
- taha:
+ test:
   description: "Runs My First command it tpes to worlds"
-  usage: "/Taha <world>"
+  usage: "/test <world>"
   permission: anvil.taha
 permissions:
   anvil:
