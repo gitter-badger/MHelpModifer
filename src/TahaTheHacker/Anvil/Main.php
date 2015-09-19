@@ -87,7 +87,7 @@ public function onSignCreate(SignChangeEvent $event){
 		$player->sendMessage("Faild, Not found.");
 		return false;
 	}//Level
-		if($event->getServer()->isLevelGenerated($line1)){
+		if($Player->getServer()->isLevelGenerated($line1)){
 		$player->sendMessage("Created!.");
 		$signTile->setText("§c[§l§6SG§r§c]", $line1, "[" . $lvl->getPlayers() . '/10]', "§l§aTap To Join");
 		}
