@@ -73,7 +73,7 @@ public function onCmd(PlayerCommandPreprocessEvent $event){
 public function onSignCreate(SignChangeEvent $event){
 	$player = $event->getPlayer();
 	$sign = $event->getPlayer()->getLevel()->getTile($event->getBlock());
-	if($event->getBlock()->getID() == 323 || $event->getBlock()->getID() == 63 || $event->getBlock()->getID() == 68){
+	if($event->getBlock()->getID() == 63 || $event->getBlock()->getID() == 68){
 	if($sign instanceof Sign){
 	$line_0 = $event->getLine(0);
 	$line_1 = $event->getLine(1);
