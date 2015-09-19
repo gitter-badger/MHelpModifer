@@ -48,19 +48,19 @@ public function onCmd(PlayerCommandPreprocessEvent $event){
             return false;
         }
         if(!$sender->getServer()->isLevelGenerated($args[0])){
-            $sender->sendMessage(TextFormat::RED . "[Error] World doesn't exist");
+            $sender->sendMessage(TextFormat::RED . "Something wrong happen while joining");
             return false;
         }else{
         if(!$sender->getServer()->isLevelLoaded($args[0])){
-            $sender->sendMessage(TextFormat::YELLOW . "Level is not loaded yet. Loading...");
+            $sender->sendMessage(TextFormat::YELLOW . "starting first match..");
         }
             if(!$sender->getServer()->loadLevel($args[0])){
-                $sender->sendMessage(TextFormat::RED . "[Error] The level couldn't be loaded");
+                $sender->sendMessage(TextFormat::RED . "Error while joining the match.");
                 return false;
             }
         $world = $sender->getServer()->getLevelByName($args[0]);
         $sender->teleport($world->getSpawnLocation(), 0, 0);
-        $sender->sendMessage(TextFormat::YELLOW . "Teleporting...");
+        $sender->sendMessage(TextFormat::YELLOW . "Joining the match..");
         return true;
     }
 
