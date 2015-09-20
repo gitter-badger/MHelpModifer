@@ -19,6 +19,6 @@ class Timer extends PluginTask {
     parent::__construct($plugin) ;
   }
   public function onRun($tick) {
-    $this->plugin->onSignCreate();
+    $this->$plugin->onSignCreate();
 }
 }//Class
