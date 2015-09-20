@@ -20,6 +20,7 @@ use pocketmine\command\Command;
 use pocketmine\command\CommandExecutor;
 use pocketmine\command\PluginCommand;
 use pocketmine\level\Level;
+use pocketmine\scheduler\ServerScheduler;
 
 class Main extends PluginBase implements Listener {
   
