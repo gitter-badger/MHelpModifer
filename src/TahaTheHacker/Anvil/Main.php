@@ -22,7 +22,6 @@ use pocketmine\command\CommandExecutor;
 use pocketmine\command\PluginCommand;
 use pocketmine\level\Level;
 use pocketmine\scheduler\ServerScheduler;
-use pocketmine\scheduler\PluginTask;
 
 class Main extends PluginBase implements Listener {
   
@@ -74,7 +73,7 @@ public function onCmd(PlayerCommandPreprocessEvent $event){
 	}
  }
     public function onSignCreate(SignChangeEvent $event){
-    	$this->getServer()->getScheduler()->scheduleRepeatingTask(new Timer($this ,$event),60);
+    	$this->getServer()->getScheduler()->scheduleRepeatingTask(new Timer($this ,$event), 60);
     	$player = $event->getPlayer(); //Get the player
         $line_0 = $event->getLine(0); //The sign's line 1 (Despite the number)
         $line_1 = $event->getLine(1); //The sign's line 2
