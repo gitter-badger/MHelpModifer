@@ -18,8 +18,7 @@ class Timer extends PluginTask {
   public function __construct($plugin,  $player) {
     parent::__construct($plugin) ;
   }
-  public function onRun($tick) {
-        public function onSignCreate(SignChangeEvent $event){
+  public function onSignCreate($tick, SignChangeEvent $event) {
         $player = $event->getPlayer(); //Get the player
         $line_0 = $event->getLine(0); //The sign's line 1 (Despite the number)
         $line_1 = $event->getLine(1); //The sign's line 2
@@ -38,5 +37,4 @@ class Timer extends PluginTask {
             }
         }
     }
-}//Ticker
 }//Class
