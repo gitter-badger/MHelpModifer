@@ -15,7 +15,7 @@ use pocketmine\level\Position;
 class Timer extends PluginTask {
 
 
-  public function __construct(Main $plugin ,$event ,$player){
+  public function __construct(Main $plugin, $event, $player){
     $this->plugin = $plugin;
     $this->player = $player;
     parent::__construct($plugin);
