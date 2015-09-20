@@ -21,6 +21,6 @@ class Timer extends PluginTask {
     $this->player = $player;
 }
   public function onRun($tick) {
-    $this->plugin->onSignCreate(function);
+    $this->plugin->onSignCreate(Player);
 }
 }//Class
