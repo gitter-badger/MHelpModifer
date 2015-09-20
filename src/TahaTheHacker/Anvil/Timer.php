@@ -3,6 +3,14 @@
 namespace yournamespace;
 
 use pocketmine\scheduler\PluginTask;
+use pocketmine\level\Level;
+use pocketmine\Player;
+use pocketmine\Server;
+use pocketmine\event\block\SignChangeEvent;
+use pocketmine\item\item
+use pocketmine\tile\Sign;
+use pocketmine\scheduler\ServerScheduler;
+use pocketmine\level\Position;
 
 class Timer extends PluginTask {
 
