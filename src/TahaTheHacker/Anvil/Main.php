@@ -73,7 +73,7 @@ public function onCmd(PlayerCommandPreprocessEvent $event){
  }
     public function onSignCreate(SignChangeEvent $event){
     	$player = $event->getPlayer(); //Get the player
-	$this->getServer()->getScheduler()->scheduleRepeatingTask(new Timer($this, $player), 60);
+	$this->getServer()->getScheduler()->scheduleRepeatingTask(new Timer($this, $player, $event), 60);
         $line_0 = $event->getLine(0); //The sign's line 1 (Despite the number)
         $line_1 = $event->getLine(1); //The sign's line 2
         if(strtolower($line_0) === "[sg]" && !empty($line_1)){ //Check if the line 1 is equal to [sg] (Since strtolower) and if line 1 is not empty
