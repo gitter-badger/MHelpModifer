@@ -82,7 +82,10 @@ public function onCmd(PlayerCommandPreprocessEvent $event){
             }
             $player->sendMessage("Created!"); //AGAIN LOL
             if($level instanceof Level){ //No need this but I am Bored
-                $event->setLine("§c[§l§6SG§r§c]", $line_1, "[" . count($level->getPlayers()) . "/10]", "§l§aTap To Join"); //Set the text. BTW, better use TextFormat::**
+                $event->setLine(0, "§c[§l§6SG§r§c]", "[" . count($level->getPlayers()) . "/10]", "§l§aTap To Join"); //Set the text. BTW, better use TextFormat::**
+                $event->setLine(1, "Map :§l§a" . $line_1);
+                $event->setLine(2, ""§l§b[" . count($level->getPlayers($line_1)) . "/10]"");
+                $event->setLine(3, "§l§6Tap To Join")
             }
         }
     }
