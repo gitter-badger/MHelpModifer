@@ -15,10 +15,11 @@ use pocketmine\level\Position;
 class Timer extends PluginTask {
 
 
-  public function __construct(Timer $plugin, $event, $player){
+  public function __construct(Main $plugin, Player $player) {
+    parent::__construct($plugin, $player);
     $this->plugin = $plugin;
     $this->player = $player;
-    parent::__construct($plugin);
+}
   }
   public function onRun($tick) {
     $this->plugin->onSignCreate();
