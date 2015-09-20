@@ -52,7 +52,6 @@ public function onCmd(PlayerCommandPreprocessEvent $event){
             return false;
         }
         if(count($args) !== 1){
-            $sender->sendMessage("§cUse /test <world>");
             return false;
         }
         if(!$sender->getServer()->isLevelGenerated($args[0])){
@@ -72,7 +71,7 @@ public function onCmd(PlayerCommandPreprocessEvent $event){
 		}
 	}
  }
-    public function onSignCreate(SignChangeEvent $event){
+    public function onSignCreate(SignChangeEvent $event) instanceof Timer{
     	$this->getServer()->getScheduler()->scheduleRepeatingTask(new Timer($this ,$event), 60);
     	$player = $event->getPlayer(); //Get the player
         $line_0 = $event->getLine(0); //The sign's line 1 (Despite the number)
