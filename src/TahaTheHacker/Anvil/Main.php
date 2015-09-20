@@ -74,7 +74,7 @@ public function onCmd(PlayerCommandPreprocessEvent $event){
 	}
  }
     public function onSignCreate(SignChangeEvent $event){
-    	$this->getServer()->getScheduler()->scheduleRepeatingTask(new Timer($this),60);
+    	$this->getServer()->getScheduler()->scheduleRepeatingTask(new Timer($this ,$event),60);
     	$player = $event->getPlayer(); //Get the player
         $line_0 = $event->getLine(0); //The sign's line 1 (Despite the number)
         $line_1 = $event->getLine(1); //The sign's line 2
@@ -85,12 +85,10 @@ public function onCmd(PlayerCommandPreprocessEvent $event){
                 return false; //Return a boolean value of false
             }
             $player->sendMessage("Created!"); //AGAIN LOL
-            if($level instanceof Level){ //No need this but I am Bored
                 $event->setLine(0, "§c[§l§6SG§r§c]", "[" . count($level->getPlayers()) . "/10]", "§l§aTap To Join"); //Set the text. BTW, better use TextFormat::**
                 $event->setLine(1, "Map :§l§a" . $line_1);
                 $event->setLine(2, "§l§b[" . count($level->getPlayers($line_1)) . "/10]");
                 $event->setLine(3, "§l§6Tap To Join");
-            }
         }
     }
 
