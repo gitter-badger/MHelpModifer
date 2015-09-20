@@ -70,10 +70,6 @@ public function onCmd(PlayerCommandPreprocessEvent $event){
 		}
 	}
  }
-
-use pocketmine\level\Level;
-use pocketmine\event\block\SignChangeEvent;
-
     public function onSignCreate(SignChangeEvent $event){
         $player = $event->getPlayer(); //Get the player
         $line_0 = $event->getLine(0); //The sign's line 1 (Despite the number)
