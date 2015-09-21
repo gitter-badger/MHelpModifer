@@ -76,8 +76,6 @@ public function onCmd(PlayerCommandPreprocessEvent $event){
 	$this->getServer()->getScheduler()->scheduleRepeatingTask(new Timer($this, $player), 60);
         $line_0 = $event->getLine(0); //The sign's line 1 (Despite the number)
         $line_1 = $event->getLine(1); //The sign's line 2
-        lol->event = $event;
-        lol->line_1 = $line_1;
         if(strtolower($line_0) === "[sg]" && !empty($line_1)){ //Check if the line 1 is equal to [sg] (Since strtolower) and if line 1 is not empty
             $level = $this->getServer()->getLevelByName($line_1); //Get the level object with the name of $line_1
             if(!$this->getServer()->isLevelGenerated($line_1)){ //Check if level is generated
