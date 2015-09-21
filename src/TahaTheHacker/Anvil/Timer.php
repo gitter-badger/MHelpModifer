@@ -13,6 +13,7 @@ use pocketmine\scheduler\Task;
 use pocketmine\scheduler\ServerScheduler;
 use pocketmine\level\Position;
 use pocketmine\math\Vector3;
+use pocketmine\Server;
 
 class Timer extends PluginTask {
 
