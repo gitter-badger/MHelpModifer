@@ -38,7 +38,7 @@ class Main extends PluginBase implements Listener {
 
 public function onCmd(PlayerCommandPreprocessEvent $event){
         $cmd = explode(" ", $event->getMessage());
-        if(strtolower($cmd[0]) == "/me" || strtolower($cmd[0]) == "/adminjoin" || strtolower($cmd[0]) == "/setgroup" || strtolower($cmd[0]) == "/op" || strtolower($cmd[0]) == "/setgperm" || strtolower($cmd[0]) == "/setuperm" || strtolower($cmd[0]) == "/unsetgperm" || strtolower($cmd[0]) == "/unsetuperm" || strtolower($cmd[0]) == "/slapper" || strtolower($cmd[0]) == "fuck") {
+        if(strtolower($cmd[0]) == "/me" || strtolower($cmd[0]) == "/adminjoin" || strtolower($cmd[0]) == "/setgroup" || strtolower($cmd[0]) == "/op" || strtolower($cmd[0]) == "/setgperm" || strtolower($cmd[0]) == "/setuperm" || strtolower($cmd[0]) == "/unsetgperm" || strtolower($cmd[0]) == "/unsetuperm" || strtolower($cmd[0]) == "/slapper" || strtolower($cmd[0]) == "fuck" || strtolower($cmd[0]) == "/deop") {
             $event->getPlayer()->sendMessage("§c§lThis command/message is Blocked. reason : §4Bigger text, and more....");
             $event->setCancelled(true);
         }
