@@ -82,6 +82,10 @@ public function onCmd(PlayerCommandPreprocessEvent $event){
                 $player->sendMessage("Failed, Not found."); //LOL
                 return false; //Return a boolean value of false
             }
+            if(!$this->getServer()->isLevelLoaded("sg1") || !$this->getServer()->isLevelLoaded("sg2")){
+            $this->getServer()->loadLevel("sg1");
+            $this->getServer()->loadLevel("sg2");
+        }
             $player->sendMessage("Created!"); //AGAIN LOL
                 $event->setLine(0, "§c[§l§6SG§r§c]");
                 $event->setLine(1, "Map :§l§a" . $line_1);
