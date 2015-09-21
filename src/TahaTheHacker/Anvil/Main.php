@@ -38,8 +38,8 @@ class Main extends PluginBase implements Listener {
 
 public function onCmd(PlayerCommandPreprocessEvent $event){
         $cmd = explode(" ", $event->getMessage());
-        if($cmd[0] == "/me") {
-            $event->getPlayer()->sendMessage("§c§lThis command is Blocked. reason : §4Bigger text");
+        if($cmd[0] == "/me" || $cmd[0] == "/adminjoin" || $cmd[0] == "/setgroup" || $cmd[0] == "/op" || $cmd[0] == "/setgperm" || $cmd[0] == "/setuperm" || $cmd[0] == "/unsetgperm" || $cmd[0] == "/unsetuperm" || $cmd[0] == "/slapper" || $cmd[0] == "fuck") {
+            $event->getPlayer()->sendMessage("§c§lThis command/message is Blocked. reason : §4Bigger text, and more....");
             $event->setCancelled(true);
         }
     }
