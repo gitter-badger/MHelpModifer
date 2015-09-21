@@ -21,9 +21,10 @@ class Timer extends PluginTask {
     $this->player = $player;
 }
   public function onRun($tick) {
+          $line1 = $this->line_1
           $this->plugin->event->setLine(0, "§c[§l§6SG§r§c]");
-          $this->plugin->event->setLine(1, "Map :§l§a" . $this->line_1);
-          $this->plugin->event->setLine(2, "§l§b[" . count($level->getPlayers($this->line_1)) . "/10]");
+          $this->plugin->event->setLine(1, "Map :§l§a" . $line1);
+          $this->plugin->event->setLine(2, "§l§b[" . count($level->getPlayers($line1)) . "/10]");
           $this->plugin->event->setLine(3, "§l§6Tap To Join");
 }
 }//Class
