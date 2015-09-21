@@ -29,4 +29,3 @@ class Timer extends PluginTask {
     }
     }
 }
-}//Class
