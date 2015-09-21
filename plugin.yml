@@ -7,7 +7,7 @@ load: POSTWORLD
 commands:
  joinmatch:
   description: "Runs My First command it tpes to worlds"
-  usage: "/test <world>"
+  usage: "/joinmatch <world>"
   permission: anvil.taha
   default: true
 permissions:
