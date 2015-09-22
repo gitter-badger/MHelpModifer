@@ -23,7 +23,7 @@ class Timer extends PluginTask {
     $this->player = $player;
 }
   public function onRun($tick) {
-    $level = $this->getServer()->getLevelByName("sg1");
+    $level = $this->plugin->getServer()->getLevelByName("sg1");
     $sg1tile = $this->plugin->getServer()->getLevelByName("lobby")->getTile(new Vector3(173, 68, 126));
     if($sg1tile instanceof Sign){
     $sg1tile->setText("§c[§l§6SG§r§c]", "Map :§l§aSG1", "§l§b[" . count($level->getPlayers("sg1")) . '/10]', "§l§6Tap To Join");
