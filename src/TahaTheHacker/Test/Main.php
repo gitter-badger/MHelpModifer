@@ -25,17 +25,14 @@ use pocketmine\event\player\PlayerMoveEvent;
 
 class Main extends PluginBase implements Listener {
     
-    public function onMove(PlayerMoveEvent $event){
-        $player = $event->getPlayer();
-        $direction = $player->getDirectionVector();
-        $x = $direction->getX();
-        $z = $direction->getZ();
-        $block = $player->getLevel()->getBlockIdAt($player->getX(), ($player->getY() - 0.1), $player->getZ());
-         if($block === 152){
-          for($i = 1; $i <= 1000; $i++) {
-                    $player->knockBack($player, 0, $x, $z, 3.2);
-                }
-         }
+    public function onCommand(CommandSender $sender, Command $cmd, $label, array $args){
+ switch($cmd->getName()){
+			case "test":
+			    if($this->$sender->getServer()->getLevelByName("sg1"){
+			        $sender->sendMessage("Perfect");
+			    }
+			    
+ }
     }//onMove
 
     }//main
