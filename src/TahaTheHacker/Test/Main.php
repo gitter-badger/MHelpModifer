@@ -28,9 +28,13 @@ class Main extends PluginBase implements Listener {
     public function onCommand(CommandSender $sender, Command $cmd, $label, array $args){
  switch($cmd->getName()){
 			case "test":
-			    if($this->$sender->getServer()->getLevelByName("sg1")){
+				 if(count($args) == 0){
+				 if($this->$sender->getServer()->getLevelByName("sg1")){
 			        $sender->sendMessage("Perfect");
 			    }
+				 }
+            			return true;
+
 			    
  }
     }//onMove
