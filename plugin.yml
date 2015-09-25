@@ -1,15 +1,9 @@
-name: Anvil
+name: Test
 version: 2.3
 api: 1.12.0
 main: TahaTheHacker\Anvil\Main
 author: TahaTheHacker
 load: POSTWORLD
-commands:
- joinmatch:
-  description: "Runs My First command it tpes to worlds"
-  usage: "/test <world>"
-  permission: anvil.taha
-  default: true
 permissions:
   anvil:
     description: "Allow use all Anvil commands."
