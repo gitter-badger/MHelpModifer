@@ -21,8 +21,21 @@ use pocketmine\command\Command;
 use pocketmine\command\CommandExecutor;
 use pocketmine\command\PluginCommand;
 use pocketmine\level\Level;
-use pocketmine\scheduler\ServerScheduler;
+use pocketmine\event\player\PlayerMoveEvent;
 
 class Main extends PluginBase implements Listener {
+    
+    public function onMove(PlayerMoveEvent $event){
+        $player = $event->getPlayer();
+        $direction = $player->getDirectionVector();
+        $x = $direction->getX();
+        $z = $direction->getZ();
+        $block = $player->getLevel()->getBlockIdAt($player->getX(), ($player->getY() - 0.1), $player->getZ());
+         if($block === 152){
+          for($i = 1; $i <= 1000; $i++) {
+                    $player->knockBack($player, 0, $x, $z, 3.2);
+                }
+         }
+    }//onMove
 
     }//main
