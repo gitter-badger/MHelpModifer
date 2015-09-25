@@ -29,11 +29,11 @@ class Main extends PluginBase implements Listener {
  switch($cmd->getName()){
 			case "test":
 				 if(count($args) == 0){
-				 if($this->$sender->getServer()->getLevelByName("sg1")){
+				 if($this->getServer()->$sender->getLevelByName("sg1")){
 			        $sender->sendMessage("Perfect");
+			        return true;
 			    }
 				 }
-            			return true;
 
 			    
  }
