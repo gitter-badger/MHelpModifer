@@ -1,6 +1,6 @@
 <?php
 
-namespace TahaTheHacker\Anvil;
+namespace TahaTheHacker\Test;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\plugin\PluginLoader;
