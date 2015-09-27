@@ -40,6 +40,7 @@ class Main extends PluginBase implements Listener {
         str_replace("{player}", $player->getName(), $array);	
               if(strtolower($cmd[0]) == "/help"){
               	$player->sendMessage($array);
+              	$event->setCancelled(true);
               }
 		}
 		}
