@@ -1,9 +1,8 @@
-#Anvil's Default config file
+#HelpModifer's default config.
 
-Compass: true
-
-compass-command: sudo {player} sneak
-
-feather: true
-
-feather-command: fly {player}
+#enables the plugin, can be "true" or "false":
+enable-plugin: "true"
+#messages will be shown when doing /help:
+messages:
+  - "Hello, {player}!"
+  - "do /list to see who are the players online!"
