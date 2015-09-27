@@ -24,19 +24,24 @@ use pocketmine\level\Level;
 use pocketmine\event\player\PlayerMoveEvent;
 
 class Main extends PluginBase implements Listener {
+	
+	public function onEnable(){
+		$this->saveDefaultConfig();
+		$this->getServer()->getLogger()->info("§l§cHelp§6Modifer §aEnabled§c!");
+		$config = yaml_parse(file_get_contents($this->getDataFolder() . "config.yml"));
+		foreach($config["messages"] as $array){
+		
     
-    public function onCommand(CommandSender $sender, Command $cmd, $label, array $args){
- switch($cmd->getName()){
-			case "test":
-				 if(count($args) == 0){
-				 if($this->getServer()->$sender->getLevelByName("sg1")){
-			        $sender->sendMessage("Perfect");
-			        return true;
-			    }
-				 }
-
-			    
- }
-    }//onMove
-
+	public function onCmd(PlayerCommandPreprocessEvent $event){
+		if($config["enable-plugin"] == "true"){
+        $cmd = explode(" ", $event->getMessage());
+        $player = $event->getPlayer();
+        str_replace("{player}", $player->getName(), $array));	
+              if(strtolower($cmd[0]) == "/help"){
+              	$player->sendMessage($array);
+              }
+		}
+	}
+		}
+	}
     }//main
