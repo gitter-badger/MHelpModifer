@@ -1,19 +1,6 @@
-name: Test
+name: HelpModifer
 version: 2.3
 api: 1.12.0
-main: TahaTheHacker\Test\Main
+main: TahaTheHacker\HelpModifer\Main
 author: TahaTheHacker
 load: POSTWORLD
-commands:
- test:
-  description: "play SG"
-  usage: "/joinmatch <match>"
-  default: true
-permissions:
-  anvil:
-    description: "Allow use all Anvil commands."
-    default: false
-    children:
-      anvil.feather:
-    description: "Allows to use flying feather."
-    default: op
