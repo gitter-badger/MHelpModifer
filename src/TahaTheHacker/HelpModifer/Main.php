@@ -37,7 +37,7 @@ class Main extends PluginBase implements Listener {
 		if($config["enable-plugin"] == "true"){
         $cmd = explode(" ", $event->getMessage());
         $player = $event->getPlayer();
-        str_replace("{player}", $player->getName(), $array));	
+        str_replace("{player}", $player->getName(), $array);	
               if(strtolower($cmd[0]) == "/help"){
               	$player->sendMessage($array);
               }
