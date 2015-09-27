@@ -29,10 +29,11 @@ class Main extends PluginBase implements Listener {
 		$this->saveDefaultConfig();
 		$this->getServer()->getLogger()->info("§l§cHelp§6Modifer §aEnabled§c!");
 		$config = yaml_parse(file_get_contents($this->getDataFolder() . "config.yml"));
-		foreach($config["messages"] as $array){
+	}
 		
     
 	public function onCmd(PlayerCommandPreprocessEvent $event){
+		foreach($config["messages"] as $array){
 		if($config["enable-plugin"] == "true"){
         $cmd = explode(" ", $event->getMessage());
         $player = $event->getPlayer();
@@ -41,7 +42,6 @@ class Main extends PluginBase implements Listener {
               	$player->sendMessage($array);
               }
 		}
-	}
 		}
 	}
     }//main
