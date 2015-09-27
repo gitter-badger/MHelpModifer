@@ -1,4 +1,5 @@
-#HelpModifer's default config.
+---
+#HelpModifer's default config
 
 #enables the plugin, can be "true" or "false":
 enable-plugin: "true"
@@ -6,3 +7,4 @@ enable-plugin: "true"
 messages:
   - "Hello, {player}!"
   - "do /list to see who are the players online!"
+...
