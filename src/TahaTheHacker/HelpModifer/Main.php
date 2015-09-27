@@ -1,6 +1,6 @@
 <?php
 
-namespace TahaTheHacker\Test;
+namespace TahaTheHacker\HelpModifer;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\plugin\PluginLoader;
