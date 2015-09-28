@@ -35,11 +35,11 @@ class Main extends PluginBase implements Listener {
 	$cmd = explode(" ", $event->getMessage());
         $player = $event->getPlayer();
 		if(strtolower($cmd[0]) == "/help"){
-			foreach($this->getConfig()->get("joinmessages") as $array){
+			foreach($this->getConfig()->get("messages") as $array){
               	$player->sendMessage($array);
+			}
               	$event->setCancelled(true);
               	 str_replace("{player}", $player->getName(), $array);
-			}
-              }
+		}
 	}
     }/*Main*/
