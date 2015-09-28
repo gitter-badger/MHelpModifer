@@ -2,7 +2,7 @@
 #HelpModifer's default config
 
 #enables the plugin, can be "true" or "false":
-enable-plugin: "true"
+enable-plugin: true
 #messages will be shown when doing /help:
 messages:
   - "Hello, {player}!"
