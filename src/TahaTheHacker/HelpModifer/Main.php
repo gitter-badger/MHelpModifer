@@ -28,20 +28,18 @@ class Main extends PluginBase implements Listener {
 	public function onEnable(){
 		$this->saveDefaultConfig();
 		$this->getServer()->getLogger()->info("§l§cHelp§6Modifer §aEnabled§c!");
-		$config = yaml_parse(file_get_contents($this->getDataFolder() . "config.yml"));
 	}
 		
     
 	public function onCmd(PlayerCommandPreprocessEvent $event){
 	$cmd = explode(" ", $event->getMessage());
         $player = $event->getPlayer();
-		foreach($this->getConfig()->get("messages") as $array){
-        
-              if(strtolower($cmd[0]) == "/help"){
+		if(strtolower($cmd[0]) == "/help"){
+			foreach($this->getConfig()->get("joinmessages") as $array){
               	$player->sendMessage($array);
               	$event->setCancelled(true);
-              	 str_replace("{player}", $player->getName(), $array);	
+              	 str_replace("{player}", $player->getName(), $array);
+			}
               }
-		}
 	}
-    }//main
+    }/*Main*/
