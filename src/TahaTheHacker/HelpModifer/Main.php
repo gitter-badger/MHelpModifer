@@ -26,6 +26,7 @@ use pocketmine\event\player\PlayerMoveEvent;
 class Main extends PluginBase implements Listener {
 	
 	public function onEnable(){
+		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->saveDefaultConfig();
 		$this->getServer()->getLogger()->info("§l§cHelp§6Modifer §aEnabled§c!");
 	}
