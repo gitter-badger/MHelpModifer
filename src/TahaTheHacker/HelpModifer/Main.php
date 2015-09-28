@@ -33,8 +33,8 @@ class Main extends PluginBase implements Listener {
 		
     
 	public function onCmd(PlayerCommandPreprocessEvent $event){
-		foreach($config["messages"] as $array){
-		if($config["enable-plugin"] == "true"){
+		foreach($this->getConfig()->get("messages") as $array){
+		if($this->getConfig()->get("enable-plugin") == true){
         $cmd = explode(" ", $event->getMessage());
         $player = $event->getPlayer();
         str_replace("{player}", $player->getName(), $array);	
