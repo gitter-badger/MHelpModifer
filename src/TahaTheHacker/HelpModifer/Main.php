@@ -38,9 +38,9 @@ class Main extends PluginBase implements Listener {
 		if(strtolower($cmd[0]) == "/help"){
 			foreach($this->getConfig()->get("messages") as $array){
               	$player->sendMessage($array);
+              	str_replace("{player}", $player->getName(), $array);
 			}
               	$event->setCancelled(true);
-              	 str_replace("{player}", $player->getName(), $array);
 		}
 	}
     }/*Main*/
