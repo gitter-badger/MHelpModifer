@@ -37,7 +37,7 @@ class Main extends PluginBase implements Listener {
         $player = $event->getPlayer();
 		if(strtolower($cmd[0]) == "/help"){
 			foreach($this->getConfig()->get("messages") as $array){
-              	$player->sendMessage($array, str_replace("{player}", $player->getName(), $array));
+              	$player->sendMessage(str_replace("{player}", $player->getName(), $array));
 			}
               	$event->setCancelled(true);
 		}
