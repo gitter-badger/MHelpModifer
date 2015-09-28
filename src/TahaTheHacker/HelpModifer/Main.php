@@ -34,15 +34,15 @@ class Main extends PluginBase implements Listener {
     
 	public function onCmd(PlayerCommandPreprocessEvent $event){
 		foreach($this->getConfig()->get("messages") as $array){
-		if($this->getConfig()->get("enable-plugin") == true){
         $cmd = explode(" ", $event->getMessage());
         $player = $event->getPlayer();
+        
         str_replace("{player}", $player->getName(), $array);	
+        
               if(strtolower($cmd[0]) == "/help"){
               	$player->sendMessage($array);
               	$event->setCancelled(true);
               }
-		}
 		}
 	}
     }//main
