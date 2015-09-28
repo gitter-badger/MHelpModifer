@@ -35,7 +35,7 @@ class Main extends PluginBase implements Listener {
 	public function onCmd(PlayerCommandPreprocessEvent $event){
 	$cmd = explode(" ", $event->getMessage());
         $player = $event->getPlayer();
-		if(strtolower($cmd[0]) == "/help"){
+		if(strtolower($cmd[0]) == "/help" || strtolower($cmd[0]) == "/?"){
 			foreach($this->getConfig()->get("messages") as $array){
               	$player->sendMessage(str_replace("{player}", $player->getName(), $array));
 			}
