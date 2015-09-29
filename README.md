@@ -1,3 +1,2 @@
-#Anvil By Taha_The_Hacker
-#####This is a <strong><a src="https://github.com/PocketMine/PocketMine-MP">PocketMine</strong></a> Plugin
-####*Authors: ```Taha_The_Hacker```
+<h1>PluginTeam</h1>
+<h2>[![Stars](https://img.shields.io/github/stars/PocketMine-Developers/PluginTeam.svg)](https://github.com/PocketMine-Developers/PluginTeam/stargazers)</h2>
