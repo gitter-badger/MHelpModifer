@@ -26,11 +26,13 @@ class Main extends PluginBase implements Listener {
 	public function onCmd(PlayerCommandPreprocessEvent $event){
 	$cmd = explode(" ", $event->getMessage());
         $player = $event->getPlayer();
+        if($event->getPlayer()->hasPermission($yml["permission"])){
 		if(strtolower($cmd[0]) === "/help" || strtolower($cmd[0]) === "/?"){
 			$event->setCancelled(true);
 			foreach($yml["messages"] as $msg){
               	$player->sendMessage(str_replace("{player}", $player->getName(), $msg);
 			}
 		}
+        }
 	}
     }/*Main*/
