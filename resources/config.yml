@@ -3,7 +3,7 @@
 #messages will be shown when doing /help:
 messages:
   - message: "Hello, {player}!"
-    world: "world"
+    world: "world"##world
   - message: "do /list to see who are the players online!"
     world: "lobby"
   - message: "and have fun!"
