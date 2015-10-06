@@ -28,9 +28,11 @@ class Main extends PluginBase implements Listener {
         
 		if(strtolower($cmd[0]) === "/help" || strtolower($cmd[0]) === "/?"){
 			
-			$event->setCancelled(true);
 			foreach($yml["messages"] as $msg){
-              	$player->sendMessage(str_replace("{player}", $player->getName(), $msg);
+			if($player->getLevel()->getLevelByName($msg["world"]){
+              	$player->sendMessage(str_replace("{player}", $player->getName(), $msg["message"]);
+              	$event->setCancelled(true);
+			}
 			}
 		}
 	}
