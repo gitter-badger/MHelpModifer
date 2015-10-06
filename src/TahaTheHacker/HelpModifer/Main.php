@@ -18,13 +18,13 @@ class Main extends PluginBase implements Listener {
 	public function onEnable(){
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->getServer()->getLogger()->info("§l§cHelp§6Modifer §aEnabled§c!");
-		$yml = yaml_parse(file_get_contents($this->getDataFolder() . "config.yml"));
 	}
 		
     
 	public function onCmd(PlayerCommandPreprocessEvent $event){
 	$cmd = explode(" ", $event->getMessage());
         $player = $event->getPlayer();
+        $yml = yaml_parse(file_get_contents($this->getDataFolder() . "config.yml"));
         
 		if(strtolower($cmd[0]) === "/help" || strtolower($cmd[0]) === "/?"){
 			
