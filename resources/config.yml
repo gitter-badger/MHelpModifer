@@ -1,10 +1,11 @@
 ---
 #HelpModifer's default config
 
-#enables the plugin, can be "true" or "false":
+#enables the plugin, can be true or false:
 enable-plugin: true
 #messages will be shown when doing /help:
 messages:
   - "Hello, {player}!"
   - "do /list to see who are the players online!"
+  - "and have fun!"
 ...
