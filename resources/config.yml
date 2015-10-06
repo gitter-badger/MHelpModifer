@@ -1,7 +1,7 @@
 ---
 #HelpModifer's default config
 #sets the permission node of displaying the messages:
-permission: hp.messages.show
+permission: "hp.messages.show"
 #messages will be shown when doing /help:
 messages:
   - "Hello, {player}!"
