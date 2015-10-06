@@ -30,7 +30,7 @@ class Main extends PluginBase implements Listener {
 			
 			foreach($yml["messages"] as $msg){
 			if($player->getLevel()->getLevelByName($msg["world"])){
-              	$player->sendMessage(str_replace("{player}", $player->getName(), $msg["message"]);
+              	$player->sendMessage(str_replace("{player}", $player->getName(), $msg["message"]));
               	$event->setCancelled(true);
 			}
 			}
