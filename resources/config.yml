@@ -2,10 +2,7 @@
 #HelpModifer's default config
 #messages will be shown when doing /help:
 messages:
-  - message: "Hello, {player}!"
-    world: "world"##world
-  - message: "do /list to see who are the players online!"
-    world: "lobby"
-  - message: "and have fun!"
-    world: "test"
+  - "Hello, {player}!"
+  - "do /list to see who are the players online!"
+  - "and have fun!"
 ...
