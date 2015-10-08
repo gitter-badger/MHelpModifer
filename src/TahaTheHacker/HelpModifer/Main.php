@@ -30,7 +30,7 @@ class Main extends PluginBase implements Listener {
 			
 			$event->setCancelled(true);
 			foreach($yml["messages"] as $msg){
-              	$player->sendMessage(str_replace("{player}", $player->getName(), $msg);
+              	$player->sendMessage(str_replace("{player}", $player->getName(), $msg));
 			}
 		}
 	}
