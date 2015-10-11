@@ -20,7 +20,7 @@ class Main extends PluginBase implements Listener {
 	$cmd = explode(" ", $event->getMessage());
         $player = $event->getPlayer();
         
-		if(strtoupper($cmd[0]) === "/HELP" || strtoupper($cmd[0]) === "/?"){
+		if(strtolower($cmd[0]) === "/help" || strtoupper($cmd[0]) === "/?"){
 			if($player->hasPermission("hp.help.show")){
 			   $event->setCancelled(true);
 				foreach($yml["messages"] as $msg){
