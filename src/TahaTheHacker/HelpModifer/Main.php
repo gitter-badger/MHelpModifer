@@ -5,17 +5,11 @@ namespace TahaTheHacker\HelpModifer;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerCommandPreprocessEvent;
-use pocketmine\command\ConsoleCommandSender;
-use pocketmine\command\CommandSender;
-use pocketmine\Player;
-use pocketmine\Server;
-use pocketmine\command\Command;
-use pocketmine\command\CommandExecutor;
-use pocketmine\command\PluginCommand;
 
 class Main extends PluginBase implements Listener {
 	
 	public function onEnable(){
+		$this->saveDefaultConfig();
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->getServer()->getLogger()->info("§l§cHelp§6Modifer §aEnabled§c!");
 	}
@@ -28,11 +22,11 @@ class Main extends PluginBase implements Listener {
         
 		if(strtoupper($cmd[0]) === "/HELP" || strtoupper($cmd[0]) === "/?"){
 			if($player->hasPermission("hp.help.show")){
-			$event->setCancelled(true);
-			foreach($yml["messages"] as $msg){
-              	$player->sendMessage(str_replace("{player}", $player->getName(), $msg));
-			}
+			   $event->setCancelled(true);
+				foreach($yml["messages"] as $msg){
+					$player->sendMessage(str_replace("{player}", $player->getName(), $msg));
+				}
 			}
 		}
 	}
-    }/*Main*/
+}
